@@ -12,17 +12,27 @@ const MainHeader = () => {
         <div className="container mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-4">
             <Image src={MainLogo} alt="Logo" className="w-16 h-18" />
-            <span className="text-2xl font-semibold text-gray-100">
+            <span className="text-2xl font-semibold text-amber-300 transition duration-300">
               Next Level Food
             </span>
           </Link>
           <nav>
             <ul className="flex space-x-6">
               <li className="text-gray-100 hover:text-amber-300 transition duration-300">
-                <NavLink href="/meals" className="text-gray-100 hover:text-amber-300 transition duration-300">Meals</NavLink>
+                <NavLink
+                  href="/meals"
+                  className="text-gray-100 hover:text-amber-300 transition duration-300"
+                >
+                  Meals
+                </NavLink>
               </li>
               <li className="text-gray-100 hover:text-amber-300 transition duration-300">
-              <NavLink href="/community" className="text-gray-100 hover:text-amber-300 transition duration-300">Community</NavLink>
+                <NavLink
+                  href="/community"
+                  className="text-gray-100 hover:text-amber-300 transition duration-300"
+                >
+                  Community
+                </NavLink>
               </li>
             </ul>
           </nav>
