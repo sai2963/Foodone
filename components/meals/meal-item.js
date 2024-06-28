@@ -17,7 +17,7 @@ const MealItem = ({title, slug, image, summary, creator}) => {
         <div className="flex flex-col justify-between h-full">
           <p className="pl-4 pr-4 py-4">{summary}</p>
           <div className="p-4 text-right">
-            <Link href={`meals/${slug}`}>View Details</Link>
+            <Link href={`meals/${slug}`} className="inline-block mt-4 px-4 py-2 rounded-lg bg-[linear-gradient(90deg,_#f9572a,_#ff9b05)] text-[#ffffff] font-bold no-underline hover:bg-[linear-gradient(90deg,_#fd4715,_#f9b241)] ">View Details</Link>
           </div>
         </div>
       </article>

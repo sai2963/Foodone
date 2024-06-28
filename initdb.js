@@ -1,11 +1,13 @@
 const sql = require('better-sqlite3');
+const { default: Page } = require('/images/page');
+import {burger} from '@/images/burger.jpg'
 const db = sql('meals.db');
 
 const dummyMeals = [
   {
     title: 'Juicy Cheese Burger',
     slug: 'juicy-cheese-burger',
-    image: '/images/burger.jpg',
+    image: {burger},
     summary:
       'A mouth-watering burger with a juicy beef patty and melted cheese, served in a soft bun.',
     instructions: `
@@ -27,7 +29,7 @@ const dummyMeals = [
   {
     title: 'Spicy Curry',
     slug: 'spicy-curry',
-    image: '/images/curry.jpg',
+    image: '/public/curry.jpg',
     summary:
       'A rich and spicy curry, infused with exotic spices and creamy coconut milk.',
     instructions: `
@@ -121,7 +123,7 @@ const dummyMeals = [
   {
     title: 'Wiener Schnitzel',
     slug: 'wiener-schnitzel',
-    image: '/images/schnitzel.jpg',
+    image: '/public/schnitzel.jpg',
     summary:
       'Crispy, golden-brown breaded veal cutlet, a classic Austrian dish.',
     instructions: `
