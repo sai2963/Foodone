@@ -33,7 +33,7 @@ const Restaurants = ({ params }) => {
         </div>
       </header>
       <main>
-      <p
+        <p
           className="text-[1.25rem] leading-normal bg-[#6e6464] text-[#13120f] rounded-[8px] [box-shadow:0_0_0.5rem_rgba(0,_0,_0,_0.5)] p-8 max-w-[60rem] mx-[auto] my-8 animate-[fade-slide-in-from-bottom_1s_ease-out_forwards]"
           dangerouslySetInnerHTML={{
             __html: meals.instructions,
