@@ -1,21 +1,46 @@
 "use client";
-import { useRef } from "react";
+import Image from "next/image";
+import { useRef, useState } from "react";
 
 const ImagePicker = () => {
+  const [pickedImage, setPickedImage] = useState();
   const ImageInput = useRef();
+
   function HandlePick() {
     ImageInput.current.click();
   }
+
+  function HandleImageChange(event) {
+    const file = event.target.files[0];
+    if (!file) {
+      return;
+    }
+    const filereader = new FileReader();
+
+    filereader.onload = () => {
+      setPickedImage(filereader.result);
+    };
+    filereader.readAsDataURL(file);
+  }
+
   return (
     <div>
-      <div className="hidden">
+      <div>
         <label htmlFor="image">Pick an Image</label>
+        <div>
+          {!pickedImage && <p>No Image Picked Yet</p>}
+          {pickedImage && (
+            <Image src={pickedImage} alt="The Image Selected by the user" width={500} height={500} />
+          )}
+        </div>
         <input
           type="file"
           name="image"
           id="image"
           accept="image/png, image/jpeg"
           ref={ImageInput}
+          onChange={HandleImageChange}
+          style={{ display: 'none' }} // Hides the file input but keeps it functional
         />
       </div>
 
@@ -29,4 +54,5 @@ const ImagePicker = () => {
     </div>
   );
 };
+
 export default ImagePicker;

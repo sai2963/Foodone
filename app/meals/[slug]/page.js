@@ -1,9 +1,13 @@
 import { getMeal } from "@/lib/meals";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 const Restaurants = ({ params }) => {
   const meals = getMeal(params.slug);
   console.log(meals.title);
+  if(meals==0){
+    notFound
+  }
   return (
     <>
       <header className="m-20 flex px-4 py-8 gap-12  max-w-7xl">
