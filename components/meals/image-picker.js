@@ -52,6 +52,7 @@ const ImagePicker = () => {
           name="image"
           id="image"
           accept="image/png, image/jpeg"
+          required
           ref={ImageInput}
           onChange={HandleImageChange}
           style={{ display: 'none' }} // Hides the file input but keeps it functional
