@@ -7,15 +7,15 @@ const Error = () => {
     <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
       <div className="text-center">
         <h1 className="text-5xl font-bold mb-8 text-red-600">Sorry</h1>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p className="text-2xl mb-4">Can't share the meal</p>
         <p className="text-lg">
           Please upgrade to a premium account to access this feature.
         </p>
         <button className="mt-8 px-6 py-3 bg-gradient-to-r from-[#f9572a] to-[#ff8a05] text-white rounded-lg shadow-lg hover:from-[#ff8a05] hover:to-[#f9572a] transition duration-300">
           <Link href="/meals">
-          Upgrade Now
+            Upgrade Now
           </Link>
-          
         </button>
       </div>
     </div>
