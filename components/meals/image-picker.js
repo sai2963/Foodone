@@ -24,13 +24,27 @@ const ImagePicker = () => {
   }
 
   return (
-    <div>
-      <div>
-        <label htmlFor="image">Pick an Image</label>
-        <div>
-          {!pickedImage && <p>No Image Picked Yet</p>}
+    <div className="flex flex-col items-center space-y-4">
+      <div className="flex flex-col items-center">
+        <div className="hidden">
+          <label htmlFor="image">Pick an Image</label>
+        </div>
+
+        <div className="flex justify-center items-center w-full">
+          {!pickedImage && (
+            <p className="text-gray-500">No Image Picked Yet</p>
+          )}
           {pickedImage && (
-            <Image src={pickedImage} alt="The Image Selected by the user" width={500} height={500} />
+            <div className="relative w-full max-w-xs mx-auto">
+              <Image
+                src={pickedImage}
+                alt="The Image Selected by the user"
+                width={500}
+                height={500}
+                className="rounded-lg shadow-lg border-2 border-gray-200"
+              />
+              
+            </div>
           )}
         </div>
         <input
