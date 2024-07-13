@@ -2,8 +2,10 @@
 import ImagePicker from "@/components/meals/image-picker";
 import MealsFormsubmit from "@/components/meals/meals-form-submit";
 import ShareMeal from "@/lib/actions";
+import {useFormState} from 'react-dom'
 
 const MealsShare = () => {
+  const [state, formAction] = useFormState(ShareMeal, { message: null });
   return (
     <>
       <div className="m-32 text-white">
@@ -21,7 +23,7 @@ const MealsShare = () => {
         <main>
           <form
             className="bg-gray-800 p-8 rounded-lg shadow-lg"
-            action={ShareMeal}
+            action={formAction}
           >
             <div>
               <div className="mb-6 flex flex-col md:flex-row md:space-x-6">
@@ -93,10 +95,9 @@ const MealsShare = () => {
               <div className="mb-6">
                 <ImagePicker />
               </div>
+              {state.message && <p>{state.message}</p>}
               <div className="text-right ">
-                
-                  <MealsFormsubmit />
-                
+                <MealsFormsubmit />
               </div>
             </div>
           </form>
