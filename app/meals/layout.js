@@ -1,6 +1,9 @@
 
-
-const MealsLayput=({children})=>{
+export const metadata = {
+   title: 'All Meals',
+   description: 'Explore The Delicious Meals ',
+ };
+const MealsLayout=({children})=>{
 
    return(
     <>
@@ -10,4 +13,4 @@ const MealsLayput=({children})=>{
    )
 }
 
-export default MealsLayput;
+export default MealsLayout;

@@ -13,7 +13,7 @@ const MainHeader = () => {
           <Link href="/" className="flex items-center space-x-4">
             <Image src={MainLogo} alt="Logo" className="w-16 h-18" />
             <span className="text-2xl font-semibold text-amber-300 transition duration-300">
-              Next Level Food
+              One Food
             </span>
           </Link>
           <nav>

@@ -1,12 +1,21 @@
 import { getMeal } from "@/lib/meals";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-
+export async function generateMetadata({params}){
+  const meal =getMeal(params.slug);
+  if (!meal) {
+    notFound();
+  }
+  return{
+    title:meal.title,
+    description:meal.summary
+  }
+}
 const Restaurants = ({ params }) => {
   const meals = getMeal(params.slug);
   console.log(meals.title);
-  if(meals==0){
-    notFound
+  if (!meals) {
+    notFound();
   }
   return (
     <>
