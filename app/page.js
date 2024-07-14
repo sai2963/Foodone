@@ -4,17 +4,17 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="bg-gray-800">
-        <header className="text-white flex flex-col items-center lg:flex-row lg:justify-end relative">
+      <div className="bg-gray-800 min-h-screen flex flex-col justify-center">
+        <header className="text-white flex flex-col lg:flex-row items-center justify-center relative p-4">
           {/* Left side image placeholder */}
-          <div className="lg:w-1/2 flex justify-center lg:justify-start p-4">
+          <div className="lg:w-1/2 flex justify-center p-4">
             <div className="w-80 h-80 lg:w-96 lg:h-96">
               <ImageSlider />
             </div>
           </div>
 
-          <div className="container mx-auto text-center py-16 px-4 relative lg:w-1/2 lg:py-32 lg:text-left">
-            <div className="mb-8 mt-6">
+          <div className="lg:w-1/2 text-center p-4 lg:py-16">
+            <div className="mb-8 mt-6 lg:mt-0">
               <h1 className="text-3xl lg:text-5xl font-extrabold mb-4">
                 NextLevel Food for NextLevel Foodies
               </h1>
